@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		3E0FD98924A43BBB0036FA90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0FD98824A43BBB0036FA90 /* AppDelegate.swift */; };
-		3E0FD98B24A43BBB0036FA90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0FD98A24A43BBB0036FA90 /* ViewController.swift */; };
+		3E0FD98B24A43BBB0036FA90 /* BloodPressureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0FD98A24A43BBB0036FA90 /* BloodPressureVC.swift */; };
 		3E0FD98E24A43BBC0036FA90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0FD98C24A43BBC0036FA90 /* Main.storyboard */; };
 		3E0FD99024A43BE80036FA90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E0FD98F24A43BE80036FA90 /* Assets.xcassets */; };
 		3E0FD99324A43BE80036FA90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0FD99124A43BE80036FA90 /* LaunchScreen.storyboard */; };
+		3E0FD99C24A44F5C0036FA90 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0FD99B24A44F5C0036FA90 /* Api.swift */; };
+		5575E5170615688C2826B487 /* Pods_Blood_pressure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB45A6E022410FC6E30349E /* Pods_Blood_pressure.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DB45A6E022410FC6E30349E /* Pods_Blood_pressure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blood_pressure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E0FD98524A43BBB0036FA90 /* Blood pressure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blood pressure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E0FD98824A43BBB0036FA90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3E0FD98A24A43BBB0036FA90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E0FD98A24A43BBB0036FA90 /* BloodPressureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureVC.swift; sourceTree = "<group>"; };
 		3E0FD98D24A43BBC0036FA90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E0FD98F24A43BE80036FA90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E0FD99224A43BE80036FA90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E0FD99424A43BE80036FA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E0FD99B24A44F5C0036FA90 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		B73874ABE631DDDC3BFF6A8D /* Pods-Blood pressure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blood pressure.release.xcconfig"; path = "Target Support Files/Pods-Blood pressure/Pods-Blood pressure.release.xcconfig"; sourceTree = "<group>"; };
+		D385E14559C5D7FCFDFD1F12 /* Pods-Blood pressure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blood pressure.debug.xcconfig"; path = "Target Support Files/Pods-Blood pressure/Pods-Blood pressure.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5575E5170615688C2826B487 /* Pods_Blood_pressure.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08169EC69FD16D22F286138E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D385E14559C5D7FCFDFD1F12 /* Pods-Blood pressure.debug.xcconfig */,
+				B73874ABE631DDDC3BFF6A8D /* Pods-Blood pressure.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3E0FD97C24A43BBA0036FA90 = {
 			isa = PBXGroup;
 			children = (
 				3E0FD98724A43BBB0036FA90 /* Blood pressure */,
 				3E0FD98624A43BBB0036FA90 /* Products */,
+				08169EC69FD16D22F286138E /* Pods */,
+				C209FAF944F9EEBC70673E43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +72,31 @@
 		3E0FD98724A43BBB0036FA90 /* Blood pressure */ = {
 			isa = PBXGroup;
 			children = (
+				3E0FD99A24A44F4A0036FA90 /* Api */,
 				3E0FD98824A43BBB0036FA90 /* AppDelegate.swift */,
-				3E0FD98A24A43BBB0036FA90 /* ViewController.swift */,
+				3E0FD98A24A43BBB0036FA90 /* BloodPressureVC.swift */,
 				3E0FD98C24A43BBC0036FA90 /* Main.storyboard */,
 				3E0FD98F24A43BE80036FA90 /* Assets.xcassets */,
 				3E0FD99124A43BE80036FA90 /* LaunchScreen.storyboard */,
 				3E0FD99424A43BE80036FA90 /* Info.plist */,
 			);
 			path = "Blood pressure";
+			sourceTree = "<group>";
+		};
+		3E0FD99A24A44F4A0036FA90 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				3E0FD99B24A44F5C0036FA90 /* Api.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		C209FAF944F9EEBC70673E43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DB45A6E022410FC6E30349E /* Pods_Blood_pressure.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E0FD99724A43BE80036FA90 /* Build configuration list for PBXNativeTarget "Blood pressure" */;
 			buildPhases = (
+				5B7ED88E860E1671E296C55C /* [CP] Check Pods Manifest.lock */,
 				3E0FD98124A43BBA0036FA90 /* Sources */,
 				3E0FD98224A43BBA0036FA90 /* Frameworks */,
 				3E0FD98324A43BBA0036FA90 /* Resources */,
+				C51BDF46E61997168BBA6E9C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +167,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B7ED88E860E1671E296C55C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Blood pressure-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C51BDF46E61997168BBA6E9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Blood pressure/Pods-Blood pressure-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3E0FD98124A43BBA0036FA90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E0FD98B24A43BBB0036FA90 /* ViewController.swift in Sources */,
+				3E0FD99C24A44F5C0036FA90 /* Api.swift in Sources */,
+				3E0FD98B24A43BBB0036FA90 /* BloodPressureVC.swift in Sources */,
 				3E0FD98924A43BBB0036FA90 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +348,7 @@
 		};
 		3E0FD99824A43BE80036FA90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D385E14559C5D7FCFDFD1F12 /* Pods-Blood pressure.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +366,7 @@
 		};
 		3E0FD99924A43BE80036FA90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B73874ABE631DDDC3BFF6A8D /* Pods-Blood pressure.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,24 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UNr-1C-Dxh">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Blood pressure-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BloodPressureVC" customModule="Blood_pressure" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="89215726-blood-pressure-vector-illustration-blood-hypertension-icon-" translatesAutoresizingMaskIntoConstraints="NO" id="HkG-yi-1Bu">
+                                <rect key="frame" x="60" y="64" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="F23-rB-XBP"/>
+                                    <constraint firstAttribute="height" constant="150" id="zC4-7g-sit"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your blood pressure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeA-AK-J5y">
+                                <rect key="frame" x="30" y="249" width="153" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="120/80" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h81-ll-cZh">
+                                <rect key="frame" x="35" y="299.5" width="250" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mmHg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5s-Wl-BFN">
+                                <rect key="frame" x="234" y="343.5" width="51" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EES-yO-Ssz">
+                                <rect key="frame" x="100.5" y="383.5" width="119" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="systolic  :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBv-IX-myl">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfk-dc-fPA">
+                                        <rect key="frame" x="91" y="0.0" width="28" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hZz-60-MjU">
+                                <rect key="frame" x="97.5" y="435" width="125" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="diastolic  :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnR-tN-GaI">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbn-bi-ioi">
+                                        <rect key="frame" x="97" y="0.0" width="28" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OG7-Za-wQc">
+                                <rect key="frame" x="110" y="419" width="100" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="86U-6O-jb4"/>
+                                    <constraint firstAttribute="width" constant="100" id="v5W-iq-BKQ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are in perfect condition now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTN-ru-w7k">
+                                <rect key="frame" x="37" y="485.5" width="246.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OG7-Za-wQc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="11S-kp-mxh"/>
+                            <constraint firstItem="eeA-AK-J5y" firstAttribute="top" secondItem="HkG-yi-1Bu" secondAttribute="bottom" constant="35" id="6Mg-h0-PZE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O5s-Wl-BFN" secondAttribute="trailing" constant="35" id="DJq-ec-i8M"/>
+                            <constraint firstItem="cTN-ru-w7k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EN2-ua-c6U"/>
+                            <constraint firstItem="OG7-Za-wQc" firstAttribute="top" secondItem="EES-yO-Ssz" secondAttribute="bottom" constant="15" id="EvG-gq-P0b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h81-ll-cZh" secondAttribute="trailing" constant="35" id="M4S-ga-ikL"/>
+                            <constraint firstItem="EES-yO-Ssz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NV9-c6-WES"/>
+                            <constraint firstItem="eeA-AK-J5y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="PME-Nw-dBn"/>
+                            <constraint firstItem="h81-ll-cZh" firstAttribute="top" secondItem="eeA-AK-J5y" secondAttribute="bottom" constant="30" id="SXc-5M-Imp"/>
+                            <constraint firstItem="h81-ll-cZh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="h6Q-vZ-M26"/>
+                            <constraint firstItem="h81-ll-cZh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kyv-Sj-GEY"/>
+                            <constraint firstItem="cTN-ru-w7k" firstAttribute="top" secondItem="hZz-60-MjU" secondAttribute="bottom" constant="30" id="pyg-Cj-xJJ"/>
+                            <constraint firstItem="HkG-yi-1Bu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="taB-yQ-6f2"/>
+                            <constraint firstItem="EES-yO-Ssz" firstAttribute="top" secondItem="h81-ll-cZh" secondAttribute="bottom" constant="50" id="urK-JF-4vd"/>
+                            <constraint firstItem="HkG-yi-1Bu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w3E-7t-WK8"/>
+                            <constraint firstItem="O5s-Wl-BFN" firstAttribute="top" secondItem="h81-ll-cZh" secondAttribute="bottom" constant="10" id="wFS-T3-gUT"/>
+                            <constraint firstItem="hZz-60-MjU" firstAttribute="top" secondItem="OG7-Za-wQc" secondAttribute="bottom" constant="15" id="wrQ-5R-IrX"/>
+                            <constraint firstItem="hZz-60-MjU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x3a-ds-ufe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Blood pressure" id="U1J-YJ-81f"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1020" y="777.66116941529242"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7fS-d2-bkU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UNr-1C-Dxh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ugw-b2-Zh9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PrF-vd-Jpd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Moo-Hh-MiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="777.66116941529242"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="89215726-blood-pressure-vector-illustration-blood-hypertension-icon-" width="1299" height="1300"/>
+    </resources>
 </document>
